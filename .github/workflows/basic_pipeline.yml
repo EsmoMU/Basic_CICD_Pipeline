@@ -23,6 +23,8 @@ jobs:
         python -m pip install --upgrade pip
         # pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip list
+        ls -al
     - name: Test with pytest
       run: |
         python3 .tests/test_hello.py
